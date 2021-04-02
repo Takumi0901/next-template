@@ -6,13 +6,8 @@
     "build": "next build",
     "start": "next start",
     "prettier:quick": "pretty-quick --staged",
-    "lint": "eslint src/** --ext .ts,.tsx"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged",
-      "pre-push": "npm run lint"
-    }
+    "lint": "eslint src/** --ext .ts,.tsx",
+    "pre-commit": "npm run prettier:quick && npm run lint"
   },
   "dependencies": {
     "next": "latest",
