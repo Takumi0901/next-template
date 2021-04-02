@@ -6,7 +6,7 @@ type Props = {
   title?: string
 }
 
-const Layout: React.FC<Props> = ({ children, title }) => (
+const Layout: React.FC<Props> = ({ children }) => (
   <div>
     <Head>
       <title>{'hgoehoge'}</title>
