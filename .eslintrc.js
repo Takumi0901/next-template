@@ -25,12 +25,11 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
-    // 'plugin:import/errors',
-    // 'plugin:import/warnings',
+    'plugin:import/errors',
+    'plugin:import/warnings',
     'plugin:import/typescript'
   ],
   rules: {
-    // 'no-unused-vars': 'off',
     'react/prop-types': 'off',
     'jsx-a11y/anchor-is-valid': [
       'error',
@@ -47,7 +46,8 @@ module.exports = {
     'import/namespace': [2],
     'import/default': [2],
     'import/export': [2],
-    'import/order': ['error'],
+    'import/order': [2],
+    'import/no-unresolved': [2, { ignore: ['^src'] }],
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-imports-ts': 'warn'
   }

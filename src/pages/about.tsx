@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import React, { VFC } from 'react'
+import Link from 'next/link'
 import Layout from 'src/components/Layout'
 
 const AboutPage: VFC = () => (
