@@ -1,15 +1,8 @@
-import React, { useEffect, useState, VFC } from 'react'
+import React, { VFC } from 'react'
 import Link from 'next/link'
-import Layout from '../components/Layout'
+import Layout from 'src/components/Layout'
 
 const IndexPage: VFC = () => {
-  const [count, setCount] = useState<number>(0)
-  useEffect(() => {
-    setCount(1)
-  }, [])
-
-  const hoge = 'hgoe'
-
   return (
     <Layout title="Home | Next.js + TypeScript Example">
       <h1>

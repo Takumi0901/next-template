@@ -9,7 +9,7 @@ type Props = {
 const Layout: React.FC<Props> = ({ children }) => (
   <div>
     <Head>
-      <title>{'hgoehoge'}</title>
+      <title>{'ホゲホゲ'}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
