@@ -1,12 +1,11 @@
-import * as React from 'react'
-import ListItem from './ListItem'
-import { User } from '../interfaces'
+import * as React from "react";
+import ListItem from "./ListItem";
 
 type Props = {
-  items: User[]
-}
+  items: any[];
+};
 
-const List = ({ items }: Props) => (
+const List: React.VFC<Props> = ({ items }) => (
   <ul>
     {items.map((item) => (
       <li key={item.id}>
@@ -14,6 +13,6 @@ const List = ({ items }: Props) => (
       </li>
     ))}
   </ul>
-)
+);
 
-export default List
+export default List;
