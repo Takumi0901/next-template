@@ -1,4 +1,4 @@
-// const withOffline = require("next-offline");
+const withOffline = require('next-offline')
 const path = require('path')
 const withPlugins = require('next-compose-plugins')
 
@@ -19,32 +19,32 @@ const plugins = [
   ]
 ]
 
-// if (process.env.NODE_ENV === "production") {
-//   plugins.push([
-//     withOffline,
-//     {
-//       workboxOpts: {
-//         swDest: "service-worker.js",
-//         runtimeCaching: [
-//           {
-//             urlPattern: /^https?.*/,
-//             handler: "NetworkFirst",
-//             options: {
-//               cacheName: "https-calls",
-//               networkTimeoutSeconds: 15,
-//               expiration: {
-//                 maxEntries: 150,
-//                 maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
-//               },
-//               cacheableResponse: {
-//                 statuses: [0, 200],
-//               },
-//             },
-//           },
-//         ],
-//       },
-//     },
-//   ]);
-// }
+if (process.env.NODE_ENV === 'production') {
+  plugins.push([
+    withOffline,
+    {
+      workboxOpts: {
+        swDest: 'service-worker.js',
+        runtimeCaching: [
+          {
+            urlPattern: /^https?.*/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'https-calls',
+              networkTimeoutSeconds: 15,
+              expiration: {
+                maxEntries: 150,
+                maxAgeSeconds: 30 * 24 * 60 * 60 // 1 month
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ])
+}
 
 module.exports = withPlugins(plugins)

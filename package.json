@@ -5,6 +5,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "export": "npm run build && next export && npm run copySW",
+    "copySW": "cp .next/service-worker.js out/service-worker.js",
     "prettier:quick": "pretty-quick --staged",
     "lint": "eslint src/** --ext .ts,.tsx",
     "pre-commit": "npm run prettier:quick && npm run lint"
@@ -32,6 +34,7 @@
     "eslint-plugin-unused-imports": "^1.1.1",
     "husky": "^6.0.0",
     "next-compose-plugins": "^2.2.1",
+    "next-offline": "^5.0.3",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "typescript": "4.0"
