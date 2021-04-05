@@ -13,3 +13,6 @@ https://www.npmjs.com/package/eslint-plugin-import
 https://www.npmjs.com/package/eslint-plugin-unused-imports
 
 ## style
+
+基本的に styled-jsx を使う。
+util として tailwind を使う。
