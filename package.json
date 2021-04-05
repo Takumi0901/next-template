@@ -8,7 +8,7 @@
     "export": "npm run build && next export && npm run copySW",
     "copySW": "cp .next/service-worker.js out/service-worker.js",
     "prettier:quick": "pretty-quick --staged",
-    "lint": "eslint src/** --ext .ts,.tsx",
+    "lint": "eslint src/** --no-error-on-unmatched-pattern --ext .ts,.tsx",
     "pre-commit": "npm run prettier:quick && npm run lint"
   },
   "dependencies": {
